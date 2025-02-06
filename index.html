@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Tailwind css cdn link -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- font-family link  -->
+  </head>
+  <body class="bg-gray-100 font-sans ">
+    <!-- Navbar -->
+
+    <nav
+      class="bg-white shadow-md px-3 md:px-5 py-2 flex justify-between items-center"
+    >
+      <div class="flex items-center gap-4">
+        <i class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+        <img
+          src="/images/logo.png"
+          alt="CUIMS Logo"
+          class="h-10 w-16 md:h-16 md:w-28 cursor-pointer"
+        />
+      </div>
+
+      <!-- Search bar (Hidden on mobile, shows at md breakpoint) -->
+      <div
+        class="hidden md:flex items-center border border-gray-300 rounded-full px-3 py-2 w-2/5"
+      >
+        <input
+          type="text"
+          placeholder="Search & Bookmark"
+          class="w-full text-lg font-semibold outline-none"
+        />
+        <i class="fa-solid fa-magnifying-glass text-gray-500 cursor-pointer"></i>
+      </div>
+
+      <!-- Icons (Some hidden on mobile, show on md) -->
+      <div class="flex items-center gap-3 md:gap-8 cursor-pointer">
+        <i class="fa-regular fa-bell hidden md:flex text-gray-400"></i>
+        <i class="fa-solid fa-book text-gray-400"></i>
+        <div class="flex items-center space-x-3">
+          <span class="text-gray-600 font-medium">Sheetal</span>
+          <img
+            src="/images/profile.jpg"
+            alt="Profile"
+            class="rounded-full h-10 w-10 md:h-14 md:w-14 "
+          />
+        </div>
+        <i class="fa-solid fa-house hidden md:flex"></i>
+        <i class="fa-solid fa-gear hidden md:flex"></i>
+      </div>
+    </nav>
+
+    <div class="max-w-8xl mx-auto p-2 md:p-4">
+      <!-- card section -->
+      <div
+        class="grid grid-cols-4 border border-gray-200 bg-white mb-5 rounded-md shadow-md"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-2 p-2 md:p-6 border-r-2 border-gray-200"
+        >
+          <i class="fa-regular fa-square-check text-pink-500"></i>
+          <h1 class="text-gray-500 text-sm md:text-lg font-semibold">
+            Important Links
+          </h1>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-2 p-2 md:p-6 border-r-2 border-gray-200"
+        >
+          <i class="fa-solid fa-comment-dots text-pink-500"></i>
+          <h1 class="text-gray-500 text-sm md:text-lg font-semibold">
+            Feedback
+          </h1>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-2 p-2 md:p-6 border-r-2 border-gray-200"
+        >
+          <i class="fa-solid fa-display text-pink-500"></i>
+          <h1 class="text-gray-500 text-sm md:text-lg font-semibold">
+            CU Live
+          </h1>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-2 p-2 md:p-6 border-r-2 border-gray-200"
+        >
+          <i class="fa-solid fa-magnifying-glass text-pink-500"></i>
+          <h1 class="text-gray-500 text-sm md:text-lg font-semibold">
+            Staff Search
+          </h1>
+        </div>
+      </div>
+
+      <div
+        class="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        <!-- important message -->
+        <div class="border border-gray-200 bg-white rounded-md shadow-md">
+          <div
+            class="flex items-center gap-2 p-3 bg-blue-600 rounded-t-md text-white"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <p class="text-lg font-semibold">Important Message</p>
+          </div>
+          <p class="text-gray-500 text-sm p-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ipsa
+            minima voluptatibus, quidem saepe obcaecati nisi nobis, iusto
+            inventore adipisci natus, eos magni explicabo hic nostrum et quia
+            non ex.
+          </p>
+        </div>
+
+        <!-- question to answer -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-white rounded-md border-t-4 border-pink-500 shadow-md">
+            <div class="flex items-center gap-2 p-3 bg-pink-500 text-white">
+              <i class="fa-regular fa-circle-question"></i>
+              <p class="text-lg font-semibold">My Questions or Queries</p>
+            </div>
+
+            <div class="p-3 rounded-md">
+              <table
+                class="w-full text-center border border-gray-300 border-collapse"
+              >
+                <thead>
+                  <tr class="bg-gray-200 border border-gray-300">
+                    <th class="p-2 border border-gray-300">Total</th>
+                    <th class="p-2 border border-gray-300">Closed</th>
+                    <th class="p-2 border border-gray-300">Open</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="p-2 border border-gray-300">0</td>
+                    <td class="p-2 border border-gray-300">0</td>
+                    <td class="p-2 border border-gray-300">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-md border-t-4 border-blue-900 shadow-md">
+            <div class="flex items-center gap-2 p-3 bg-blue-900 text-white">
+              <i class="fa-solid fa-comment-dots"></i>
+              <p class="text-lg font-semibold">FeedBack to Answer</p>
+            </div>
+
+            <div class="p-3 rounded-md">
+              <table
+                class="w-full text-center border border-gray-300 border-collapse"
+              >
+                <tbody>
+                  <tr>
+                    <td class="p-2 border border-gray-300 bg-gray-200 text-start">
+                      Staff
+                    </td>
+                    <td class="p-2 border border-gray-300">0</td>
+                    <td class="p-2 border border-gray-300">0</td>
+                    <td class="p-2 border border-gray-300">0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2 border border-gray-300 bg-gray-200 text-start">
+                      Students
+                    </td>
+                    <td class="p-2 border border-gray-300">0</td>
+                    <td class="p-2 border border-gray-300">0</td>
+                    <td class="p-2 border border-gray-300">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance Log -->
+        <div class="bg-white rounded-md border-t-4 border-purple-800 shadow-md">
+          <div
+            class="flex items-center justify-between p-3 bg-purple-800 text-white"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-chart-column"></i>
+              <p class="text-lg font-semibold">Attendance Log</p>
+            </div>
+            <button class="text-end cursor-pointer text-red-100">View More</button>
+          </div>
+
+          <div class="rounded-md">
+            <table
+              class="w-full text-center text-semibold border border-gray-300 border-collapse"
+            >
+              <thead>
+                <tr class="bg-gray-200 border border-gray-300">
+                  <th class="p-2 border border-gray-300">Date</th>
+                  <th class="p-2 border border-gray-300">Day</th>
+                  <th class="p-2 border border-gray-300">In Time</th>
+                  <th class="p-2 border border-gray-300">Out Time</th>
+                  <th class="p-2 border border-gray-300">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border border-gray-300">5 Feb 2025</td>
+                  <td class="p-2 border border-gray-300">Tuesday</td>
+                  <td class="p-2 border border-gray-300">09:00 AM</td>
+                  <td class="p-2 border border-gray-300">06:00 PM</td>
+                  <td class="p-2 border border-gray-300">Present</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-gray-300">4 Feb 2025</td>
+                  <td class="p-2 border border-gray-300">Monday</td>
+                  <td class="p-2 border border-gray-300">09:15 AM</td>
+                  <td class="p-2 border border-gray-300">06:05 PM</td>
+                  <td class="p-2 border border-gray-300">Present</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-gray-300">3 Feb 2025</td>
+                  <td class="p-2 border border-gray-300">Sunday</td>
+                  <td class="p-2 border border-gray-300">-</td>
+                  <td class="p-2 border border-gray-300">-</td>
+                  <td class="p-2 border border-gray-300">Off</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-gray-300">2 Feb 2025</td>
+                  <td class="p-2 border border-gray-300">Sunday</td>
+                  <td class="p-2 border border-gray-300">-</td>
+                  <td class="p-2 border border-gray-300">-</td>
+                  <td class="p-2 border border-gray-300">Off</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-gray-300">1 Feb 2025</td>
+                  <td class="p-2 border border-gray-300">Monday</td>
+                  <td class="p-2 border border-gray-300">-</td>
+                  <td class="p-2 border border-gray-300">-</td>
+                  <td class="p-2 border border-gray-300">Off</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-gray-300">31 Jan 2025</td>
+                  <td class="p-2 border border-gray-300">Fri</td>
+                  <td class="p-2 border border-gray-300">X</td>
+                  <td class="p-2 border border-gray-300">X</td>
+                  <td class="p-2 border border-gray-300">Off</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-end pt-10 p-2 text-sm font-semibold text-gray-500">
+              Last Update as on:05-Feb-2025 15:20
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-9xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4"
+      >
+        <!-- Announcements -->
+        <div class="bg-white rounded-md col-span-2 shadow-md border-t-4">
+          <h2 class="text-lg bg-gray-900 p-3 text-white font-bold">
+            📢 Announcements
+          </h2>
+          <div class="flex items-center justify-between p-4">
+            <div
+              class="flex items-center border border-gray-300 rounded-full px-3 py-2 w-2/5 cursor-pointer justify-between"
+            >
+              <input
+                type="text"
+                placeholder="Search Announcement"
+                class="w-2/3 text-lg font-semibold outline-none"
+              />
+              <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+            </div>
+            <div
+              class="flex items-center border border-gray-300 rounded-full px-3 py-2 w-2/5 cursor-pointer justify-between"
+            >
+              <p>All</p>
+              <p>X</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="bg-white shadow-md rounded-md border-t-4 border-pink-500">
+          <div class="flex items-center text-white bg-pink-500 gap-2 p-3">
+            <i class="fa-regular fa-square-check"></i>
+            <h1 class="text-lg font-semibold">Upcoming Events</h1>
+          </div>
+          <p class="p-3">No Event found. Please Contact Your Concered Event</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
